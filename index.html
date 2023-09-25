@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate strong passwords with this Password Generator tool. Customize password length, include uppercase, lowercase, numbers, and symbols.">
+    <title>Password Generator - Create Strong and Secure Passwords</title>
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container p-3">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>PASSWORD GENERATOR</h1>
+                <!-- Input To Dispaly Password -->
+                <div class="position-relative w-75">
+                    <input type="text" class="form-control w-100 py-1 ps-3 mt-3 " id="inputText" value="">
+                    <i class="fa-solid fa-rotate reload-icon "></i>
+                </div>
+                <!-- Two Button (Create & Copy) -->
+                <div class="d-flex justify-content-between mt-3 w-75">
+                    <button class=" p-1" type="button" id="copyBtn">
+                        <span>COPY PASSWORD_ </span>
+                        <i class="fa-solid fa-arrow-right" style="color: #000000;"></i>
+                    </button>
+                    <button class="p-1 " id="createPass">
+                        CREATE PASSWORD_
+                    </button>
+                </div>
+                <!-- warning span -->
+                <span class="text-danger p-1" id="warning" style="opacity: 0%;"></span>
+                <!-- Range to let user select number of digits -->
+                <div class="mt-5 d-grid text-center align-items-center w-75">
+                    <div class="range">
+                        <div class="sliderValue">
+                            <span style="left: 50%;">10</span>
+                        </div>
+                        <div class="field">
+                            <div class="value-left">5</div>
+                                <input type="range" min="5" max="15" value="10" step="1" id="inputRange">
+                            <div class="value-right">15</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- choose the properties of password  -->
+                <div class="mt-3">
+                    <div class="d-inline-block form-check me-1">
+                        <input type="checkbox" name="uppercase" id="uppercase" class="form-check-input">
+                        <label for="uppercase" class="form-check-label ms-1">Uppercase</label>
+                    </div>
+                    <div class="d-inline-block form-check me-1">
+                        <input type="checkbox" name="lowercase" id="lowercase" class="form-check-input" >
+                        <label for="lowercase" class="form-check-label ms-1">Lowercase</label>
+                    </div>
+                    <div class="d-inline-block form-check me-1">
+                        <input type="checkbox" name="numbers" id="numbers" class="form-check-input" >
+                        <label for="numbers" class="form-check-label ms-1">Numbers</label>
+                    </div>
+                    <div class="d-inline-block form-check">
+                        <input type="checkbox" name="symbols" id="symbols" class="form-check-input">
+                        <label for="symbols" class="form-check-label ms-1">Symbols</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Display History Of Passwords -->
+            <div class="col-md-4">
+                <h3 class="text-center p1 mb-3 mt-4">PASSWORD HISTORY</h3>
+                <div class="container" id="insideHistory">
+                </div>
+                <div class="text-center mt-3">
+                    <button class="" id="clearBtn">Clear History</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>
